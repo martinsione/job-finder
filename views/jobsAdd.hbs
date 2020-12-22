@@ -1,0 +1,42 @@
+<section class="container my-5">
+
+  <div class="form-wrap">
+    <h2>Agrega tu oferta de trabajo</h2>   
+    <p></p>
+    {{#each errors}}
+      <div>
+        <p>{{text}}</p>
+      </div>
+    {{/each}}
+    <form action="/jobs/add" method="POST">
+      <div class="mb-3">
+        <label class="form-label">Titulo</label>
+        <input type="text" class="form-control" id="title" name="title" value={{title}}>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tech stack</label>
+        <input type="text" class="form-control" id="technologies" name="technologies" value={{technologies}}>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Presupuesto</label>
+        <input type="text" class="form-control" id="budget" name="budget" value={{budget}}>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descripcion</label>
+        <textarea type="text" class="form-control" id="description" name="description" value={{description}}></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email address</label>
+        <input type="email" class="form-control" id="contact_email" name="contact_email" value={{contact_email}}>
+        <div id="" class="form-text">Tu email sera compartido con los usuarios que decidan aplicar a tu oferta</div>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="">
+        <label class="form-check-label">Deseo recibir emails acerca de potenciales empleados</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+  
+  </div>
+</section>

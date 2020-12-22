@@ -1,0 +1,109 @@
+*,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0; }
+
+.custom-shape-divider-bottom-1608588334 {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0; }
+
+.custom-shape-divider-bottom-1608588334 svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 500px; }
+
+.custom-shape-divider-bottom-1608588334 .shape-fill {
+  fill: #0b5ed7; }
+
+#index {
+  align-items: center;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  width: 100%; }
+  #index form {
+    width: 90%;
+    margin: 30px; }
+    #index form div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #index form div input {
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px 10px;
+        width: 100%; }
+        #index form div input:focus {
+          background-color: transparent; }
+      #index form div #submit-btn {
+        background-color: #0b5ed7;
+        border-radius: 15px;
+        color: #eeeeee;
+        padding: 10px;
+        width: 100%; }
+
+#jobs-wrapper {
+  background-color: #f1f2f4;
+  padding: 25px 0; }
+  #jobs-wrapper #jobs {
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+    margin: auto;
+    width: 95%; }
+    #jobs-wrapper #jobs #jobs-card {
+      background-color: #ffffff;
+      border-bottom: 1px solid #999; }
+      #jobs-wrapper #jobs #jobs-card:hover {
+        background-color: #f9f9f9; }
+        #jobs-wrapper #jobs #jobs-card:hover a h3 {
+          color: #0b5ed7; }
+      #jobs-wrapper #jobs #jobs-card a {
+        color: #444;
+        display: block;
+        padding: 30px;
+        margin: auto;
+        text-decoration: none;
+        width: 95%; }
+        #jobs-wrapper #jobs #jobs-card a h3 {
+          font-size: 1.3em;
+          font-weight: 600;
+          margin-bottom: 20px; }
+          #jobs-wrapper #jobs #jobs-card a h3:hover {
+            text-decoration: underline; }
+        #jobs-wrapper #jobs #jobs-card a #card-header {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 0.9em;
+          justify-content: space-around;
+          margin-bottom: 20px; }
+          #jobs-wrapper #jobs #jobs-card a #card-header p {
+            font-weight: 600; }
+        #jobs-wrapper #jobs #jobs-card a #card-body #card-description {
+          font-size: 0.9em;
+          margin-bottom: 20px; }
+        #jobs-wrapper #jobs #jobs-card a #card-body #card-technologies {
+          font-size: 0.9em;
+          font-weight: 600; }
+          #jobs-wrapper #jobs #jobs-card a #card-body #card-technologies span {
+            font-weight: 400; }
