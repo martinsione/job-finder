@@ -1,21 +1,21 @@
-<section id="jobs-wrapper">
-  <div id="jobs">
+<section class="jobs">
+  <div class="jobs-wrapper">
     {{#each Jobs}}
-      <div id="jobs-card">
+      <div id="jobs-body">
         <a href="/jobs/{{id}}">
-          <h3>{{title}}</h3>
-          <div id="card-header">
-            <div>
-              <p>${{budget}}</p>
-              <span>Precio fijado</span>
-            </div>
-            <div>
-              {{!-- <p>{{experience}}</p> --}}
-              <p>Experto</p>
-              <span>Nivel de experiencia</span>
-            </div>
-          </div>
           <div id="card-body">
+            <h3>{{title}}</h3>
+            <div id="card-header">
+              <div>
+                <p>${{budget}}</p>
+                <span>Precio fijado</span>
+              </div>
+              <div>
+                {{!-- <p>{{experience}}</p> --}}
+                <p>Experto</p>
+                <span>Nivel de experiencia</span>
+              </div>
+            </div>
             <p id="card-description">{{description}}</p>
             <p id="card-technologies">Tecnologias: <span>{{technologies}}</span></p>
           </div>

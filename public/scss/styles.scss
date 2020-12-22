@@ -1,3 +1,6 @@
+//Imports
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
 // Variables
 $search-border-color: #ccc;
 $search-border-color-focus: #999;
@@ -8,6 +11,7 @@ $text-light: #eeeeee;
 
 // Font weight
 $weight-light: 400;
+$weight-medium: 500;
 $weight-semi-bold: 600;
 
 *,
@@ -20,38 +24,67 @@ h4,
 h5,
 h6,
 form,
+button,
 input {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  outline: 0;
   border: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 0;
 }
 
-.custom-shape-divider-bottom-1608588334 {
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
+// Wave de arriba
+.custom-shape-divider-top-1608654015 {
   left: 0;
-  width: 100%;
-  overflow: hidden;
   line-height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
-.custom-shape-divider-bottom-1608588334 svg {
+.custom-shape-divider-top-1608654015 svg {
   position: relative;
   display: block;
   width: calc(300% + 1.3px);
   height: 500px;
+  transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1608588334 .shape-fill {
+.custom-shape-divider-top-1608654015 .shape-fill {
   fill: $bs-blue;
 }
 
-// #layout_main {
-//   height: 100vh;
-// }
+#layout_main {
+  background: #f1f2f4;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+// Partials
+#navbar {
+  background: $bs-blue !important;
+  font-weight: $weight-medium;
+  z-index: 9999;
+  #container {
+    #navbarNav {
+      #navbar-list-container {
+        position: relative !important;
+        display: flex !important;
+        justify-content: center !important;
+        width: 95%;
+        ul {
+          li {
+            margin-left: 50px !important;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Home page
 #index {
@@ -59,95 +92,94 @@ input {
   color: $text-dark-gray;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 80vh;
+  justify-content: center;
+  top: -1px;
+  position: absolute;
   width: 100%;
+  z-index: 1;
 
   form {
     width: 90%;
-    margin: 30px;
+    margin: 80px 30px;
 
     div {
-      display: flex;
-      justify-content: center;
       align-items: center;
-      flex-direction: column;
+      border-radius: 10px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
       input {
         background-color: white;
-        border-radius: 15px;
+        border-radius: 10px 0 0 10px;
+        height: 50px;
         padding: 15px 10px;
-        width: 100%;
-        &:focus {
-          background-color: transparent;
-        }
+        width: 85%;
       }
       #submit-btn {
-        background-color: $bs-blue;
-        border-radius: 15px;
+        background: #444;
+        border-radius: 0 10px 10px 0;
         color: $text-light;
-        padding: 10px;
-        width: 100%;
+        height: 50px;
+        outline: none;
+        width: 15%;
       }
     }
   }
 }
 
-// Jobs page
-#jobs-wrapper {
-  background-color: #f1f2f4;
-  padding: 25px 0;
+// Jobs / JobsAdd view
+.jobs {
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  margin: 25px auto;
+  width: 95%;
+  .jobs-wrapper {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  #jobs {
-    border-radius: 5px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-    margin: auto;
-    width: 95%;
-    #jobs-card {
-      background-color: #ffffff;
-      border-bottom: 1px solid #999;
-      &:hover {
-        background-color: #f9f9f9;
-        a {
+    #jobs-body {
+      a {
+        border-bottom: 1px solid #999;
+        color: $text-dark-gray;
+        display: block;
+        padding: 30px;
+        text-decoration: none;
+        &:hover {
+          background-color: #f9f9f9;
           h3 {
             color: $bs-blue;
           }
         }
-      }
-      a {
-        color: $text-dark-gray;
-        display: block;
-        padding: 30px;
-        margin: auto;
-        text-decoration: none;
-        width: 95%;
         h3 {
-          font-size: 1.3em;
-          font-weight: $weight-semi-bold;
+          font-size: 1.4em;
+          font-weight: $weight-medium;
           margin-bottom: 20px;
+          width: fit-content;
           &:hover {
             text-decoration: underline;
           }
         }
-        #card-header {
-          display: flex;
-          flex-wrap: wrap;
-          font-size: 0.9em;
-          justify-content: space-around;
-          margin-bottom: 20px;
-          p {
-            font-weight: $weight-semi-bold;
-          }
-        }
 
         #card-body {
+          font-size: 0.9em;
+          #card-header {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            p {
+              font-weight: $weight-semi-bold;
+            }
+          }
           #card-description {
-            font-size: 0.9em;
             margin-bottom: 20px;
           }
 
           #card-technologies {
-            font-size: 0.9em;
             font-weight: $weight-semi-bold;
 
             span {
@@ -155,20 +187,100 @@ input {
             }
           }
         }
+      }
+    }
 
-        // form {
-        //   input {
-        //     background-color: $bs-blue;
-        //     border-radius: 5px;
-        //     color: $text-light;
-        //     display: flex;
-        //     padding: 10px;
-        //   }
-        // }
+    #jobs-add-body {
+      border-bottom: 1px solid #999;
+      color: $text-dark-gray;
+      display: block;
+      padding: 30px;
+      text-decoration: none;
+      width: 100%;
+
+      h2 {
+        font-size: 1.7em;
+        font-weight: $weight-medium;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      div {
+        margin: 30px;
+        label {
+          color: #555;
+          font-weight: $weight-medium;
+          margin-left: 3px;
+          margin-bottom: 5px;
+        }
+        // Just for the {{experience}} radios
+        #form-radio {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          width: 80%;
+          label {
+            font-weight: $weight-light;
+          }
+        }
+        input,
+        textarea {
+          border: 1px solid $text-dark-gray;
+          border-radius: 5px;
+          width: 100%;
+          padding: 5px;
+
+          &:focus {
+            border: 1px $bs-blue solid;
+          }
+        }
+
+        button {
+          background-color: $bs-blue;
+          border-radius: 5px;
+          color: $text-light;
+          font-weight: $weight-medium;
+          outline: 0;
+          padding: 7px;
+        }
       }
     }
   }
 }
 
+// Just for the radios
+@media only screen and (min-width: 575px) {
+  // Fix to waves on this res
+  // Home screen
+  #index {
+    position: static;
+  }
+  .custom-shape-divider-top-1608654015 svg {
+    height: 700px;
+  }
+  // Jobs screen
+  .jobs {
+    width: 90% !important; // Para pisar bootstrap
+  }
+}
+
 @media only screen and (min-width: 768px) {
+  .jobs {
+    width: 85% !important; // Para pisar bootstrap
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .jobs {
+    width: 75% !important; // Para pisar bootstrap
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .jobs {
+    width: 70% !important; // Para pisar bootstrap
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .jobs {
+    width: 55% !important; // Para pisar bootstrap
+  }
 }

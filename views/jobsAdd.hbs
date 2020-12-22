@@ -1,42 +1,54 @@
-<section class="container my-5">
+<section class="jobs">
+  <div class="jobs-wrapper">
+    <div id="jobs-add-body">
+      <h2>Agrega tu oferta de trabajo</h2>   
+      <p></p>
+      {{#each errors}}
+        <div>
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
 
-  <div class="form-wrap">
-    <h2>Agrega tu oferta de trabajo</h2>   
-    <p></p>
-    {{#each errors}}
-      <div>
-        <p>{{text}}</p>
-      </div>
-    {{/each}}
-    <form action="/jobs/add" method="POST">
-      <div class="mb-3">
-        <label class="form-label">Titulo</label>
-        <input type="text" class="form-control" id="title" name="title" value={{title}}>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Tech stack</label>
-        <input type="text" class="form-control" id="technologies" name="technologies" value={{technologies}}>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Presupuesto</label>
-        <input type="text" class="form-control" id="budget" name="budget" value={{budget}}>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Descripcion</label>
-        <textarea type="text" class="form-control" id="description" name="description" value={{description}}></textarea>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Email address</label>
-        <input type="email" class="form-control" id="contact_email" name="contact_email" value={{contact_email}}>
-        <div id="" class="form-text">Tu email sera compartido con los usuarios que decidan aplicar a tu oferta</div>
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="">
-        <label class="form-check-label">Deseo recibir emails acerca de potenciales empleados</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  
-  
+      <form class="jobs-add-form" action="/jobs/add" method="POST">
+        <div>
+          <label>Titulo</label>
+          <input type="text" id="title" name="title" required value={{title}}>
+        </div>
+
+        <div>
+          <label>Tech stack</label>
+          <input type="text" id="technologies" name="technologies" required value={{technologies}}>
+        </div>
+
+        <div>
+          <label>Presupuesto</label>
+          <input type="text" id="budget" name="budget" required value={{budget}}>
+        </div>
+
+        <div>
+          <label>Nivel de experiencia</label>
+          <span id="form-radio">
+            <label for=""><input type="radio" name="experiencie" required value={{experiencie}} id="">Entry level</label>
+            <label for=""><input type="radio" name="experiencie" required value={{experiencie}} id="">Intermediate level</label>
+            <label for=""><input type="radio" name="experiencie" required value={{experiencie}} id="">Expert level</label>
+          </span>
+        </div>
+
+        <div>
+          <label>Descripcion</label>
+          <textarea type="text" id="description" name="description" required value={{description}}></textarea>
+        </div>
+
+        <div>
+          <label>Email address</label>
+          <input type="email" id="contact_email" name="contact_email" required value={{contact_email}}>
+          <span id="" class="form-text">Tu email sera compartido con los usuarios que decidan aplicar a tu oferta</span>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>

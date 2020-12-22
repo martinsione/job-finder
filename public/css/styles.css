@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 *,
 p,
 span,
@@ -8,102 +9,191 @@ h4,
 h5,
 h6,
 form,
+button,
 input {
+  border: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0; }
+  outline: none;
+  padding: 0; }
 
-.custom-shape-divider-bottom-1608588334 {
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
+.custom-shape-divider-top-1608654015 {
   left: 0;
-  width: 100%;
+  line-height: 0;
   overflow: hidden;
-  line-height: 0; }
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1; }
 
-.custom-shape-divider-bottom-1608588334 svg {
+.custom-shape-divider-top-1608654015 svg {
   position: relative;
   display: block;
   width: calc(300% + 1.3px);
-  height: 500px; }
+  height: 500px;
+  transform: rotateY(180deg); }
 
-.custom-shape-divider-bottom-1608588334 .shape-fill {
+.custom-shape-divider-top-1608654015 .shape-fill {
   fill: #0b5ed7; }
+
+#layout_main {
+  background: #f1f2f4;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1; }
+
+#navbar {
+  background: #0b5ed7 !important;
+  font-weight: 500;
+  z-index: 9999; }
+  #navbar #container #navbarNav #navbar-list-container {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 95%; }
+    #navbar #container #navbarNav #navbar-list-container ul li {
+      margin-left: 50px !important; }
 
 #index {
   align-items: center;
   color: #444;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 80vh;
-  width: 100%; }
+  justify-content: center;
+  top: -1px;
+  position: absolute;
+  width: 100%;
+  z-index: 1; }
   #index form {
     width: 90%;
-    margin: 30px; }
+    margin: 80px 30px; }
     #index form div {
-      display: flex;
-      justify-content: center;
       align-items: center;
-      flex-direction: column; }
+      border-radius: 10px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
       #index form div input {
         background-color: white;
-        border-radius: 15px;
+        border-radius: 10px 0 0 10px;
+        height: 50px;
         padding: 15px 10px;
-        width: 100%; }
-        #index form div input:focus {
-          background-color: transparent; }
+        width: 85%; }
       #index form div #submit-btn {
-        background-color: #0b5ed7;
-        border-radius: 15px;
+        background: #444;
+        border-radius: 0 10px 10px 0;
         color: #eeeeee;
-        padding: 10px;
-        width: 100%; }
+        height: 50px;
+        outline: none;
+        width: 15%; }
 
-#jobs-wrapper {
-  background-color: #f1f2f4;
-  padding: 25px 0; }
-  #jobs-wrapper #jobs {
-    border-radius: 5px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-    margin: auto;
-    width: 95%; }
-    #jobs-wrapper #jobs #jobs-card {
-      background-color: #ffffff;
-      border-bottom: 1px solid #999; }
-      #jobs-wrapper #jobs #jobs-card:hover {
+.jobs {
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  margin: 25px auto;
+  width: 95%; }
+  .jobs .jobs-wrapper {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .jobs .jobs-wrapper #jobs-body a {
+      border-bottom: 1px solid #999;
+      color: #444;
+      display: block;
+      padding: 30px;
+      text-decoration: none; }
+      .jobs .jobs-wrapper #jobs-body a:hover {
         background-color: #f9f9f9; }
-        #jobs-wrapper #jobs #jobs-card:hover a h3 {
+        .jobs .jobs-wrapper #jobs-body a:hover h3 {
           color: #0b5ed7; }
-      #jobs-wrapper #jobs #jobs-card a {
-        color: #444;
-        display: block;
-        padding: 30px;
-        margin: auto;
-        text-decoration: none;
-        width: 95%; }
-        #jobs-wrapper #jobs #jobs-card a h3 {
-          font-size: 1.3em;
-          font-weight: 600;
-          margin-bottom: 20px; }
-          #jobs-wrapper #jobs #jobs-card a h3:hover {
-            text-decoration: underline; }
-        #jobs-wrapper #jobs #jobs-card a #card-header {
+      .jobs .jobs-wrapper #jobs-body a h3 {
+        font-size: 1.4em;
+        font-weight: 500;
+        margin-bottom: 20px;
+        width: fit-content; }
+        .jobs .jobs-wrapper #jobs-body a h3:hover {
+          text-decoration: underline; }
+      .jobs .jobs-wrapper #jobs-body a #card-body {
+        font-size: 0.9em; }
+        .jobs .jobs-wrapper #jobs-body a #card-body #card-header {
           display: flex;
-          flex-wrap: wrap;
-          font-size: 0.9em;
           justify-content: space-around;
           margin-bottom: 20px; }
-          #jobs-wrapper #jobs #jobs-card a #card-header p {
+          .jobs .jobs-wrapper #jobs-body a #card-body #card-header p {
             font-weight: 600; }
-        #jobs-wrapper #jobs #jobs-card a #card-body #card-description {
-          font-size: 0.9em;
+        .jobs .jobs-wrapper #jobs-body a #card-body #card-description {
           margin-bottom: 20px; }
-        #jobs-wrapper #jobs #jobs-card a #card-body #card-technologies {
-          font-size: 0.9em;
+        .jobs .jobs-wrapper #jobs-body a #card-body #card-technologies {
           font-weight: 600; }
-          #jobs-wrapper #jobs #jobs-card a #card-body #card-technologies span {
+          .jobs .jobs-wrapper #jobs-body a #card-body #card-technologies span {
             font-weight: 400; }
+    .jobs .jobs-wrapper #jobs-add-body {
+      border-bottom: 1px solid #999;
+      color: #444;
+      display: block;
+      padding: 30px;
+      text-decoration: none;
+      width: 100%; }
+      .jobs .jobs-wrapper #jobs-add-body h2 {
+        font-size: 1.7em;
+        font-weight: 500;
+        margin-bottom: 40px;
+        text-align: center; }
+      .jobs .jobs-wrapper #jobs-add-body div {
+        margin: 30px; }
+        .jobs .jobs-wrapper #jobs-add-body div label {
+          color: #555;
+          font-weight: 500;
+          margin-left: 3px;
+          margin-bottom: 5px; }
+        .jobs .jobs-wrapper #jobs-add-body div #form-radio {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          width: 80%; }
+          .jobs .jobs-wrapper #jobs-add-body div #form-radio label {
+            font-weight: 400; }
+        .jobs .jobs-wrapper #jobs-add-body div input,
+        .jobs .jobs-wrapper #jobs-add-body div textarea {
+          border: 1px solid #444;
+          border-radius: 5px;
+          width: 100%;
+          padding: 5px; }
+          .jobs .jobs-wrapper #jobs-add-body div input:focus,
+          .jobs .jobs-wrapper #jobs-add-body div textarea:focus {
+            border: 1px #0b5ed7 solid; }
+        .jobs .jobs-wrapper #jobs-add-body div button {
+          background-color: #0b5ed7;
+          border-radius: 5px;
+          color: #eeeeee;
+          font-weight: 500;
+          outline: 0;
+          padding: 7px; }
+
+@media only screen and (min-width: 575px) {
+  #index {
+    position: static; }
+  .custom-shape-divider-top-1608654015 svg {
+    height: 700px; }
+  .jobs {
+    width: 90% !important; } }
+
+@media only screen and (min-width: 768px) {
+  .jobs {
+    width: 85% !important; } }
+
+@media only screen and (min-width: 992px) {
+  .jobs {
+    width: 75% !important; } }
+
+@media only screen and (min-width: 1200px) {
+  .jobs {
+    width: 70% !important; } }
+
+@media only screen and (min-width: 1400px) {
+  .jobs {
+    width: 55% !important; } }
