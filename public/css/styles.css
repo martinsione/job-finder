@@ -18,6 +18,15 @@ input {
   outline: none;
   padding: 0; }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; }
+
 .custom-shape-divider-top-1608654015 {
   left: 0;
   line-height: 0;

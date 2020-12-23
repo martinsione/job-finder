@@ -14,6 +14,7 @@ $weight-light: 400;
 $weight-medium: 500;
 $weight-semi-bold: 600;
 
+// Defaults
 *,
 p,
 span,
@@ -34,6 +35,17 @@ input {
   padding: 0;
 }
 
+// Sacar las flechitas del input number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 // Wave de arriba
 .custom-shape-divider-top-1608654015 {
   left: 0;
