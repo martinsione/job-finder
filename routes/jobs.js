@@ -8,6 +8,7 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 // List all jobs
+
 router.get("/", (req, res, next) => {
   Jobs.findAll()
     .then((Jobs) => {
@@ -21,7 +22,14 @@ router.get("/add", (req, res) => res.render("jobsAdd"));
 
 // Add a job
 router.post("/add", (req, res, next) => {
-  let { title, technologies, description, budget, contact_email } = req.body;
+  let {
+    title,
+    technologies,
+    budget,
+    experience,
+    description,
+    contact_email,
+  } = req.body;
   let errors = [];
 
   // Validation
@@ -31,6 +39,17 @@ router.post("/add", (req, res, next) => {
   if (!technologies) {
     errors.push({ text: "El campo de las tecnologias no puede estar vacio" });
   }
+  // if (isNaN(budget)) {
+  //   errors.push({
+  //     text: "Por favor complete el campo de presupuesto con numeros",
+  //   });
+  // }
+  // if (!experience) {
+  //   errors.push({
+  //     text:
+  //       "Por favor seleccione el tipo de experiencia requerida para el trabajo",
+  //   });
+  // }
   if (!description) {
     errors.push({ text: "El campo de la descripcion no puede estar vacio" });
   }
@@ -46,8 +65,9 @@ router.post("/add", (req, res, next) => {
       errors,
       title,
       technologies,
-      description,
       budget,
+      experience,
+      description,
       contact_email,
     });
   }
@@ -59,6 +79,7 @@ router.post("/add", (req, res, next) => {
       title,
       technologies,
       budget,
+      experience,
       description,
       contact_email,
     });
@@ -70,8 +91,9 @@ router.post("/add", (req, res, next) => {
   Jobs.create({
     title,
     technologies,
-    description,
     budget,
+    experience,
+    description,
     contact_email,
   })
     .then(() => {

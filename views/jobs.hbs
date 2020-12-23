@@ -1,7 +1,7 @@
 <section class="jobs">
   <div class="jobs-wrapper">
     {{#each Jobs}}
-      <div id="jobs-body">
+      <div class="jobs-body">
         <a href="/jobs/{{id}}">
           <div id="card-body">
             <h3>{{title}}</h3>
@@ -11,8 +11,7 @@
                 <span>Precio fijado</span>
               </div>
               <div>
-                {{!-- <p>{{experience}}</p> --}}
-                <p>Experto</p>
+                <p>{{experience}}</p>
                 <span>Nivel de experiencia</span>
               </div>
             </div>
@@ -25,9 +24,10 @@
         </a>
       </div>
     {{else}}
-      <div>
-        <p>Vaya... No hay ningun trabajo disponible, vuelve mas tarde</p>
-      </div>
+      <div id="jobs-not-found">
+        <h4>No hemos encontrado ningun trabajo relacionado con tu busqueda</h4>
+        <a href="/jobs">Ver todos los trabajos</a>
+    </div>
     {{/each}}
   </div>
 </section>

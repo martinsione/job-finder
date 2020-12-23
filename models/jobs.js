@@ -12,11 +12,14 @@ const Jobs = db.define("jobs", {
   technologies: {
     type: Sequelize.STRING,
   },
-  description: {
-    type: Sequelize.STRING,
-  },
   budget: {
     type: Sequelize.INTEGER,
+  },
+  experience: {
+    type: Sequelize.STRING,
+  },
+  description: {
+    type: Sequelize.STRING,
   },
   contact_email: {
     type: Sequelize.STRING,

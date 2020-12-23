@@ -100,37 +100,54 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    .jobs .jobs-wrapper #jobs-body a {
+    .jobs .jobs-wrapper .jobs-body a {
       border-bottom: 1px solid #999;
       color: #444;
       display: block;
       padding: 30px;
       text-decoration: none; }
-      .jobs .jobs-wrapper #jobs-body a:hover {
+      .jobs .jobs-wrapper .jobs-body a:hover {
         background-color: #f9f9f9; }
-        .jobs .jobs-wrapper #jobs-body a:hover h3 {
+        .jobs .jobs-wrapper .jobs-body a:hover h3 {
           color: #0b5ed7; }
-      .jobs .jobs-wrapper #jobs-body a h3 {
+      .jobs .jobs-wrapper .jobs-body a h3 {
         font-size: 1.4em;
         font-weight: 500;
         margin-bottom: 20px;
         width: fit-content; }
-        .jobs .jobs-wrapper #jobs-body a h3:hover {
+        .jobs .jobs-wrapper .jobs-body a h3:hover {
           text-decoration: underline; }
-      .jobs .jobs-wrapper #jobs-body a #card-body {
+      .jobs .jobs-wrapper .jobs-body a #card-body {
         font-size: 0.9em; }
-        .jobs .jobs-wrapper #jobs-body a #card-body #card-header {
+        .jobs .jobs-wrapper .jobs-body a #card-body #card-header {
           display: flex;
           justify-content: space-around;
           margin-bottom: 20px; }
-          .jobs .jobs-wrapper #jobs-body a #card-body #card-header p {
+          .jobs .jobs-wrapper .jobs-body a #card-body #card-header p {
             font-weight: 600; }
-        .jobs .jobs-wrapper #jobs-body a #card-body #card-description {
+        .jobs .jobs-wrapper .jobs-body a #card-body #card-description {
           margin-bottom: 20px; }
-        .jobs .jobs-wrapper #jobs-body a #card-body #card-technologies {
+        .jobs .jobs-wrapper .jobs-body a #card-body #card-technologies {
           font-weight: 600; }
-          .jobs .jobs-wrapper #jobs-body a #card-body #card-technologies span {
+          .jobs .jobs-wrapper .jobs-body a #card-body #card-technologies span {
             font-weight: 400; }
+    .jobs .jobs-wrapper #jobs-not-found {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 50vh;
+      justify-content: center;
+      padding: 30px; }
+      .jobs .jobs-wrapper #jobs-not-found h4 {
+        margin-bottom: 40px; }
+      .jobs .jobs-wrapper #jobs-not-found a {
+        background: #0b5ed7;
+        border-radius: 5px;
+        color: #eeeeee;
+        display: block;
+        width: fit-content;
+        padding: 10px;
+        text-decoration: none; }
     .jobs .jobs-wrapper #jobs-add-body {
       border-bottom: 1px solid #999;
       color: #444;
@@ -144,7 +161,8 @@ input {
         margin-bottom: 40px;
         text-align: center; }
       .jobs .jobs-wrapper #jobs-add-body div {
-        margin: 30px; }
+        margin: 30px auto;
+        width: 100%; }
         .jobs .jobs-wrapper #jobs-add-body div label {
           color: #555;
           font-weight: 500;
@@ -153,8 +171,7 @@ input {
         .jobs .jobs-wrapper #jobs-add-body div #form-radio {
           margin-top: 10px;
           display: flex;
-          justify-content: space-between;
-          width: 80%; }
+          justify-content: space-between; }
           .jobs .jobs-wrapper #jobs-add-body div #form-radio label {
             font-weight: 400; }
         .jobs .jobs-wrapper #jobs-add-body div input,
@@ -184,7 +201,9 @@ input {
 
 @media only screen and (min-width: 768px) {
   .jobs {
-    width: 85% !important; } }
+    width: 85% !important; }
+  #jobs-add-body div {
+    width: 80% !important; } }
 
 @media only screen and (min-width: 992px) {
   .jobs {
@@ -192,6 +211,8 @@ input {
 
 @media only screen and (min-width: 1200px) {
   .jobs {
+    width: 70% !important; }
+  #jobs-add-body div {
     width: 70% !important; } }
 
 @media only screen and (min-width: 1400px) {

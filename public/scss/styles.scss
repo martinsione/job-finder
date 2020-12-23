@@ -142,7 +142,7 @@ input {
     flex-direction: column;
     justify-content: center;
 
-    #jobs-body {
+    .jobs-body {
       a {
         border-bottom: 1px solid #999;
         color: $text-dark-gray;
@@ -190,6 +190,26 @@ input {
       }
     }
 
+    #jobs-not-found {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 50vh;
+      justify-content: center;
+      padding: 30px;
+      h4 {
+        margin-bottom: 40px;
+      }
+      a {
+        background: $bs-blue;
+        border-radius: 5px;
+        color: $text-light;
+        display: block;
+        width: fit-content;
+        padding: 10px;
+        text-decoration: none;
+      }
+    }
     #jobs-add-body {
       border-bottom: 1px solid #999;
       color: $text-dark-gray;
@@ -205,7 +225,8 @@ input {
         text-align: center;
       }
       div {
-        margin: 30px;
+        margin: 30px auto;
+        width: 100%;
         label {
           color: #555;
           font-weight: $weight-medium;
@@ -217,7 +238,6 @@ input {
           margin-top: 10px;
           display: flex;
           justify-content: space-between;
-          width: 80%;
           label {
             font-weight: $weight-light;
           }
@@ -267,6 +287,11 @@ input {
   .jobs {
     width: 85% !important; // Para pisar bootstrap
   }
+  #jobs-add-body {
+    div {
+      width: 80% !important;
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -277,6 +302,11 @@ input {
 @media only screen and (min-width: 1200px) {
   .jobs {
     width: 70% !important; // Para pisar bootstrap
+  }
+  #jobs-add-body {
+    div {
+      width: 70% !important;
+    }
   }
 }
 @media only screen and (min-width: 1400px) {
